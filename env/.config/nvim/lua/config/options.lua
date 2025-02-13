@@ -1,7 +1,7 @@
 vim.opt.guicursor = "" -- disable cursor blink
 
 vim.opt.number = true -- set line numbers
-vim.opt.relativenumber = false -- set relative line numbers
+vim.opt.relativenumber = true -- set relative line numbers
 
 vim.opt.linespace = 3
 

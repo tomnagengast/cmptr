@@ -55,7 +55,7 @@ vim.keymap.set("n", "N", "Nzzzv") -- keep cursor in the middle of the screen whe
 vim.keymap.set("i", "jj", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>") -- disable ex mode
--- vim.keymap.set("n", "<leader>F", vim.lsp.buf.format) -- change the languages format of the file
+-- vim.keymap.set("n", "<leader>F", vim.lsp.buf.format) -- format the file
 vim.keymap.set("n", "<leader>F", ":silent !tmux neww t<CR>") -- change the languages format of the file
 
 -- quickfix list navigation
@@ -68,11 +68,11 @@ vim.keymap.set("n", "<leader>F", ":silent !tmux neww t<CR>") -- change the langu
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- make file executable
--- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+-- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true }) 
 
 -- Dev stuff
 -- open packer.lua
--- vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/.config/nvim/lua/tomnagengast/packer.lua<CR>");
+-- vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/.config/nvim/lua/tomnagengast/packer.lua<CR>"); 
 
 -- vim.keymap.set("n", "<leader><leader>r", function()
 --     -- print("reloading config")
@@ -80,3 +80,4 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 --     require('data-tools')
 --     vim.cmd("DTSelectStatement")
 -- end)
+

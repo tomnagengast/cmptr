@@ -61,18 +61,19 @@ return {
         oldfiles = {
           prompt_title = 'History',
         },
-        -- lsp_references = {
-        --   previewer = false,
-        -- },
-        -- lsp_definitions = {
-        --   previewer = false,
-        -- },
-        -- lsp_document_symbols = {
-        --   symbol_width = 55,
-        -- },
+        lsp_references = {
+          previewer = false,
+        },
+        lsp_definitions = {
+          previewer = false,
+        },
+        lsp_document_symbols = {
+          symbol_width = 55,
+        },
       },
     })
 
     require('telescope').load_extension('fzf')
   end,
 }
+

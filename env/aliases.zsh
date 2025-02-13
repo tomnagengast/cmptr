@@ -9,6 +9,8 @@ alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias l='ls -1A --group-directories-first'
 alias ll='ls -1Al --header --group-directories-first'
 alias h="history | tail -n 50"
+alias rr="git rev-parse --show-toplevel"
+alias pr="cd $(rr)"
 
 # Editors
 alias c="code"
@@ -61,8 +63,8 @@ alias gl="gs log long"
 alias gd="git diff"
 alias dropmerged="git branch --merged | grep -v \"\*\" | grep -v \"main\" | xargs -n 1 git branch -d"
 
-# Go
-alias got="go test -v ./... | grep -E \"^---|FAIL|ok\""
+# Python
+alias python="python3"
 
 # GCP
 alias impersonate="gcloud config set auth/impersonate_service_account" # $SERVICE_ACCOUNT_EMAIL

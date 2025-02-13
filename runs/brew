@@ -11,9 +11,11 @@ brew install \
     fzf \
     gh \
     golang-migrate \
+    google-cloud-sdk \
     httpie \
     lua-language-server \
     lsd \
+    python \
     rg \
     tree \
     watchman \

@@ -5,7 +5,7 @@ pathadd() {
 }
 
 # Use project specific binaries before global ones
-# pathadd $HOME/.local/bin
+pathadd $HOME/.local/bin
 # pathadd /usr/local/bin
 # pathadd /usr/local/sbin
 
@@ -44,3 +44,4 @@ pathadd() {
 
 # Java
 # pathadd $JAVA_HOME/bin # /opt/homebrew/opt/openjdk/bin
+
