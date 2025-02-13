@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if ! command -v go &> /dev/null; then
+    echo "installing go"
+    curl -o golang.pkg https://dl.google.com/go/go1.24.0.darwin-amd64.pkg &> /dev/null
+    sudo installer -pkg golang.pkg -target / &> /dev/null
+    rm -rf golang.pkg
+fi

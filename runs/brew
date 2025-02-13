@@ -7,6 +7,9 @@ fi
 
 brew install \
     bat \
+    fzf \
     gh \
     lsd \
+    rg \
+    tree \
     &> /dev/null

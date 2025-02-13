@@ -7,3 +7,6 @@ fi
 
 rm -rf $XDG_CONFIG_HOME/tmux
 ln -s $CMPTR_DIR/env/.config/tmux $XDG_CONFIG_HOME/tmux
+
+rm -r $HOME/.tmux-sessionizer
+ln -s $CMPTR_DIR/env/.tmux-sessionizer $HOME/.tmux-sessionizer

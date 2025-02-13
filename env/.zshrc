@@ -22,3 +22,12 @@ export PATH="/Users/tom/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/Users/tom/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 
 eval "$(direnv hook zsh)"
+
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+eval "$(go env)"
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/zsh_completion" ] && \. "$NVM_DIR/zsh_completion"  # This loads nvm zsh_completion

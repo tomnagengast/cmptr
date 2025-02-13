@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+if ! command -v node &> /dev/null; then
+    echo "installing node"
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+fi
+
+zsh
+
+nvm install 22
+nvm use 22
+nvm alias default 22
