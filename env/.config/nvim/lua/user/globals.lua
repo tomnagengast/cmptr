@@ -29,3 +29,22 @@ vim.cmd([[
     autocmd BufWritePre * lua _G.add_new_line()
   augroup END
 ]])
+
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(args)
+    -- Enable hover diagnostics
+    vim.api.nvim_create_autocmd("CursorHold", {
+      buffer = args.buf,
+      callback = function()
+        vim.diagnostic.open_float(nil, {
+          focusable = false,
+          close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+          border = 'rounded',
+          source = 'always',
+          prefix = ' ',
+          scope = 'cursor',
+        })
+      end
+    })
+  end,
+})

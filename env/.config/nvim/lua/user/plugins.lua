@@ -59,7 +59,9 @@ require("lazy").setup({
     { import = 'user.plugins.harpoon' },
 
     -- LSP support
-    { import = 'user.plugins.lsp-zero' },
+    -- { import = 'user.plugins.lsp-zero' },
+    { import = 'user.plugins.nvim-lspconfig' },
+    { import = 'user.plugins.blink-cmp' },
 
     -- A Status line.
     { import = 'user.plugins.lualine' },
@@ -96,3 +98,4 @@ require("lazy").setup({
         colorscheme = { "rose-pine" },
     },
 })
+

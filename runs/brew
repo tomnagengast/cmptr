@@ -12,8 +12,10 @@ brew install \
     gh \
     golang-migrate \
     httpie \
+    lua-language-server \
     lsd \
     rg \
     tree \
     watchman \
     &> /dev/null
+
