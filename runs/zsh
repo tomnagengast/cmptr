@@ -31,11 +31,15 @@ for file in $(find env -name "*.zsh"); do
     ln -sf "$CMPTR_DIR/$file" "$ZSH_CUSTOM/$filename"
 done
 
+# git
 for file in $(find env -name ".git*" -type f); do
     filename=$(basename $file)
     echo "linking home $filename to $HOME/$filename"
     ln -sf "$CMPTR_DIR/$file" "$HOME/$filename"
 done
+
+rm -rf $XDG_CONFIG_HOME/1password
+ln -s $CMPTR_DIR/env/.config/1password $XDG_CONFIG_HOME/1password
 
 # Ensure starship config directory exists
 mkdir -p "$XDG_CONFIG_HOME"
