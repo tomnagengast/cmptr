@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if ! command -v tmux &> /dev/null; then
+    echo "installing tmux"
+    brew install tmux
+fi
+
+rm -rf $XDG_CONFIG_HOME/tmux
+ln -s $CMPTR_DIR/env/.config/tmux $XDG_CONFIG_HOME/tmux

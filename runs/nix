@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+if ! command -v nix &> /dev/null; then
+    echo "installing nix"
+    sudo curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install #&> /dev/null
+    nix --version
+fi
+
+# install direnv
+if ! command -v direnv &> /dev/null; then
+    echo "installing direnv"
+    nix profile install nixpkgs#direnv &> /dev/null
+    direnv --version
+fi
+
+# install devenv
+if ! command -v devenv &> /dev/null; then
+    echo "installing devenv"
+    nix profile install nixpkgs#devenv &> /dev/null
+    devenv version
+fi

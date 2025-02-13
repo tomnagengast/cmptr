@@ -1,0 +1,14 @@
+format = """
+$directory\
+$git_branch\
+$git_state\
+$cmd_duration\
+$battery\
+$line_break\
+$time\
+$shell\
+$character"""
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"

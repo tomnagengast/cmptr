@@ -1,11 +1,19 @@
 #!/usr/bin/env bash
 
-script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-echo $script_dir
+if [ -z "$XDG_CONFIG_HOME" ]; then
+    echo "no xdg config home found"
+    echo "using ~/.config"
+    XDG_CONFIG_HOME=$HOME/.config
+fi
+
+find runs -maxdepth 1 -mindepth 1 -type f -exec chmod +x {} \;
+
+export CMPTR_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+echo $CMPTR_DIR
 filter=""
 dry_run="0"
 
-cd $script_dir
+cd $CMPTR_DIR
 scripts=$(find runs -maxdepth 1 -mindepth 1 -type f -perm +0111)
 
 while [[ $# > 0 ]]; do
@@ -34,14 +42,26 @@ execute() {
     "$@"
 }
 
+
+if ! command -v brew &> /dev/null; then
+  log "installing brew"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  chmod 755 /opt/homebrew/share
+  chmod 755 /opt/homebrew/share/zsh
+  chmod 755 /opt/homebrew/share/zsh/site-functions
+
+  brew update
+fi
+
+
 log "run: filter=$filter"
 
 for script in $scripts; do
     if echo "$script" | grep -qv "$filter"; then
-        log "filtered: $filter -- $script"
+        log "filtering: $filter -- $script"
         continue
     fi
     log "running script: $script"
     execute ./$script
 done
-

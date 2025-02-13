@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+if ! command -v ghostty &> /dev/null; then
+    echo "installing ghostty"
+    brew uninstall ghostty > /dev/null 2>&1
+    brew install --cask ghostty > /dev/null
+fi
+
+rm -rf $XDG_CONFIG_HOME/ghostty
+ln -s $CMPTR_DIR/env/.config/ghostty $XDG_CONFIG_HOME/ghostty
+
+# version=$(ghostty --version | grep -o "^Ghostty.*")
+# echo "✨ $(version) installed successfully!"

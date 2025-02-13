@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+if ! command -v php &> /dev/null; then
+    echo "installing php"
+    /bin/bash -c "$(curl -fsSL https://php.new/install/mac)"
+fi
