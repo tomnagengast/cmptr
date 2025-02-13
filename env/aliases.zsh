@@ -14,6 +14,7 @@ alias h="history | tail -n 50"
 alias c="code"
 alias s="subl"
 alias v="nvim"
+alias vim="nvim"
 
 # dbt
 # alias dl="uv run dbt ls -s state:modified --resource-type model"

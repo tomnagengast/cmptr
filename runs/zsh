@@ -6,7 +6,10 @@ export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 # Install oh-my-zsh if not installed
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     echo "installing oh-my-zsh"
-    curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh > /dev/null 2>&1
+    curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh > /dev/null 2>&1 && \
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && \
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting && \
+    wait
 fi
 
 # Install starship if not installed

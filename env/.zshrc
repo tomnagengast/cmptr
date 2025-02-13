@@ -10,7 +10,10 @@ export HIST_STAMPS="yyyy-mm-dd HH:MM:SS"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-plugins=(git asdf)
+plugins=(
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 source $ZSH/oh-my-zsh.sh
 
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/config.toml"

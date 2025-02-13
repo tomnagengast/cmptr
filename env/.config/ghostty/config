@@ -15,5 +15,7 @@ gtk-titlebar = false
 keybind = global:cmd+\=toggle_visibility
 keybind = global:ctrl+a=reload_config
 
-# fullscreen = true
+# mouse-shift-capture = true
+# increase line height
+adjust-cell-height = 20
 
