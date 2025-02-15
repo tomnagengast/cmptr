@@ -14,7 +14,23 @@ return {
         },
         config = function()
             require("lspconfig").lua_ls.setup {}
-            require("lspconfig").gopls.setup {}
+            require('lspconfig').gopls.setup({
+                settings = {
+                    gopls = {
+                        analyses = {
+                            unusedparams = true,
+                        },
+                        staticcheck = true,
+                        gofumpt = true,
+                        -- Enable import organizing
+                        imports = {
+                            gofumpt = true,
+                            goimports = true,
+                        },
+                    },
+                },
+            })
+            require("lspconfig").pyright.setup {}
 
             vim.api.nvim_create_autocmd("LspAttach", {
                 callback = function(args)

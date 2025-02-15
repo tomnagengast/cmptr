@@ -15,9 +15,11 @@ brew install \
     httpie \
     lua-language-server \
     lsd \
+    postgresql \
     python \
     rg \
     tree \
     watchman \
+    universal-ctags \
     &> /dev/null
 

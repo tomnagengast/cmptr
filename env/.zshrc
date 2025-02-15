@@ -26,6 +26,8 @@ export PHP_INI_SCAN_DIR="/Users/tom/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 
 eval "$(direnv hook zsh)"
 
+export DOCKER_DEFAULT_PLATFORM=linux/arm64
+
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
@@ -40,3 +42,4 @@ if [ -f '/Users/tom/personal/cmptr/google-cloud-sdk/path.zsh.inc' ]; then . '/Us
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/tom/personal/cmptr/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tom/personal/cmptr/google-cloud-sdk/completion.zsh.inc'; fi
+

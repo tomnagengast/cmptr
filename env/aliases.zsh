@@ -9,8 +9,8 @@ alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias l='ls -1A --group-directories-first'
 alias ll='ls -1Al --header --group-directories-first'
 alias h="history | tail -n 50"
-alias rr="git rev-parse --show-toplevel"
-alias pr="cd $(rr)"
+alias rr='git rev-parse --show-toplevel 2>/dev/null'
+alias pr='if git rev-parse --git-dir > /dev/null 2>&1; then cd $(git rev-parse --show-toplevel); fi'
 
 # Editors
 alias c="code"
@@ -81,4 +81,3 @@ alias publicip="curl -s https://ipv4.icanhazip.com"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias path='echo -e ${PATH//:/\\n}'
-

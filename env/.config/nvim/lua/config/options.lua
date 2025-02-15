@@ -1,6 +1,6 @@
-vim.opt.guicursor = "" -- disable cursor blink
+vim.opt.guicursor = ""        -- disable cursor blink
 
-vim.opt.number = true -- set line numbers
+vim.opt.number = true         -- set line numbers
 vim.opt.relativenumber = true -- set relative line numbers
 
 vim.opt.linespace = 3
@@ -36,6 +36,8 @@ vim.opt.clipboard = 'unnamedplus'
 
 vim.opt.confirm = true
 
+vim.opt.laststatus = 3
+
 -- don't do backup files, but undo should have access to a long running history
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -52,9 +54,8 @@ vim.opt.updatetime = 50
 
 -- block cursor unless in insert mode
 vim.opt.guicursor = {
-  'n:block',
-  'i:ver25',
-  'v:block',
-  'c:block',
+    'n:block',
+    'i:ver25',
+    'v:block',
+    'c:block',
 }
-
