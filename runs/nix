@@ -16,6 +16,10 @@ fi
 # install devenv
 if ! command -v devenv &> /dev/null; then
     echo "installing devenv"
-    nix profile install nixpkgs#devenv &> /dev/null
+    nix profile install github:cachix/devenv/latest # &> /dev/null
+    devenv version
+else
+    echo "upgrading devenv"
+    nix profile upgrade github:cachix/devenv/latest &> /dev/null
     devenv version
 fi
