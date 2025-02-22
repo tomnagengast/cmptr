@@ -12,14 +12,16 @@ brew install \
     gh \
     golang-migrate \
     google-cloud-sdk \
+    gnupg \
     httpie \
     lua-language-server \
     lsd \
+    protobuf \
     postgresql \
     python \
     rg \
     tree \
     watchman \
-    universal-ctags \
-    &> /dev/null
+    universal-ctags 
+    # &> /dev/null
 
