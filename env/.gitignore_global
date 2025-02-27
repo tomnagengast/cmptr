@@ -25,6 +25,7 @@
 *.log
 # *.sql
 *.sqlite
+*.duckdb
 
 # OS generated files #
 ######################
@@ -54,3 +55,4 @@ v_tmp
 *.ignore
 ignore.*
 *.ignore.*
+

@@ -8,6 +8,7 @@ fi
 brew update &> /dev/null
 brew install \
     bat \
+    bufbuild/buf/buf \
     fzf \
     gh \
     golang-migrate \
@@ -22,6 +23,7 @@ brew install \
     rg \
     tree \
     watchman \
-    universal-ctags 
+    universal-ctags \
+    yq
     # &> /dev/null
 

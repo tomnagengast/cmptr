@@ -9,5 +9,6 @@ if ! command -v node &> /dev/null; then
     nvm alias default 22
 fi
 
-npm i -g pyright
-
+npm i -g \
+    pyright \
+    git-recent
