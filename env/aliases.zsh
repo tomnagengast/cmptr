@@ -46,7 +46,7 @@ alias push="git push"
 alias unstage="git restore --staged ."
 alias clean-local-branches='git branch | grep -v "main" | xargs git branch -D'
 ## Git Recent
-alias gr="git recent -n 5"
+alias gr="git recent"
 ## Git Spice
 # alias gp="/opt/homebrew/bin/gs"
 alias amend="gs commit amend --no-edit"
